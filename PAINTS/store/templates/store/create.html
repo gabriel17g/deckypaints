@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <style>
+        body {
+        background-color: limegreen;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgb(0, 166, 255);
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        .navigation {
+            background-color: limegreen;
+            padding: 10px;
+            text-align: center;
+        }    
+        .navigation a {
+            text-decoration: none;
+            margin: 10px;
+            color: #333;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            color: black    
+        } 
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/"><h1>DeckyPaints<h1></a>
+    <div>     
+<h1>Create Order</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="order">Order</button>  
+</form>
+     <br>    
+</body>
+</html>
